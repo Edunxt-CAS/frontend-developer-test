@@ -1,16 +1,16 @@
-# Laravel Developer Test Tasks
+# Laravel Developer Test Tasks with Examples
 
 ## 1. Multi-Role Login System
-Create a login page that authenticates users with three different roles (Admin, Manager, User). After successful authentication, redirect users to role-specific dashboards with appropriate access controls. Implement proper session management and role-based middleware to protect routes.
+**Task Example:** Create a school management system login where Admin can access all modules, Teachers can only access student grades and attendance, and Students can only view their own profile and grades. Implement role-based redirects after login and ensure proper authorization middleware prevents unauthorized access.
 
 ## 2. Spatie Roles and Permissions CRUD with AJAX
-Implement a complete CRUD system using Spatie Laravel Permission package. Create API endpoints for managing roles and permissions, and build a frontend interface using AJAX and jQuery for seamless user interactions without page refreshes. Include proper validation and error handling.
+**Task Example:** Build a user management interface where administrators can assign/revoke permissions like "create-posts", "edit-users", "delete-comments" to different roles. Create AJAX-powered modals for editing user roles, dynamic permission checkboxes that update without page reload, and real-time role assignment with instant feedback messages.
 
 ## 3. Events and Listeners Implementation
-Design and implement a custom event system with corresponding listeners. Create an event that triggers when a specific user action occurs (like user registration or order placement) and implement multiple listeners that handle different aspects of the event (send email, log activity, update statistics).
+**Task Example:** When a new order is placed in an e-commerce system, trigger an "OrderPlaced" event that automatically: sends confirmation email to customer, updates inventory levels, logs the transaction for analytics, and sends notification to warehouse team. Each action should be handled by separate listeners.
 
 ## 4. Jobs and Queue Processing
-Create background job processing system using Laravel queues. Implement jobs that handle time-consuming tasks (like sending bulk emails or processing large datasets) and configure proper queue workers. Include job failure handling and retry mechanisms.
+**Task Example:** Create a bulk email system that processes newsletter sending to 10,000+ subscribers. Implement jobs that send emails in batches of 100, handle failed email deliveries, retry failed jobs with exponential backoff, and provide a dashboard showing job processing status and completion rates.
 
 ## 5. Laravel Artisan Commands and Cron Jobs
-Develop custom Artisan commands that perform scheduled tasks such as database cleanup, report generation, or data synchronization. Configure these commands to run automatically using Laravel's task scheduler (cron jobs) and implement proper logging and error reporting for scheduled tasks.
+**Task Example:** Create a command that runs daily at midnight to delete expired user sessions, archive old log files, generate monthly sales reports, and send system health notifications to administrators. Include options for manual execution and dry-run mode for testing.
